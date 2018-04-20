@@ -8,6 +8,9 @@ body {
 	transition:background-color linear 5s;
 	overflow-x:hidden;
 }
+.aaa{
+	background-color: #000000;
+}
 .container {
 	display: none;
 }
@@ -996,7 +999,7 @@ audio {
 	33%{
 		-webkit-transform:translate(0px,0px);
 		-webkit-transform:rotate(10deg);
-		/*-webkit-transform:scale(1.5);*/
+		-webkit-transform:scale(1.5);
 	}
 	66% {
 		-webkit-transform:translate(0px,100px);
@@ -1303,8 +1306,8 @@ audio {
 
 
     /*controlling tablet width*/
-    /*@media only screen and (max-width: 720px){
+    @media only screen and (max-width: 720px){
     	.container {
     		-webkit-transform: scale(0.9);
     	}
-    }*/
+    }
