@@ -9,7 +9,7 @@
 	<meta charset="UTF-8" />
 	<meta name="description" content="Happy Birthday">
 	<meta name="robots" content="index, follow" />
- 
+
     <meta name="keywords" content="Birthday, Happy">
     <!-- Strat of Facebook Meta -->
     <meta property="og:type" content="E-Greeting" />
@@ -35,14 +35,14 @@
 <body>
 
 	<div class="loading"></div>
-	<ul class="cb-slideshow " >
-            <li><span>Image 01</span></li>
+	<ul class="cb-slideshow" style="display:none;" id="target">
+            <li><span>Image 01</span></li>u
             <li><span>Image 02</span></li>
             <li><span>Image 03</span></li>
             <li><span>Image 04</span></li>
             <li><span>Image 05</span></li>
             <li><span>Image 06</span></li>
-        </ul>
+  </ul>
 	<audio class="song" controls loop>
         <source src="hbd.mp3"></source>
 	   Your browser isn't invited for super fun audio time.
@@ -70,10 +70,10 @@
     </div>
 
     <img src="Balloon-Border.png" width="100%" class="balloon-border">
- 
+
 
 	<div class="container">
-		
+
 		<div class="row">
 			<div class="col-md-2 col-xs-2 bulb-holder">
 				<div class="bulb" id="bulb_yellow"></div>
@@ -210,6 +210,11 @@
 
   ga('create', 'UA-58229732-1', 'auto');
   ga('send', 'pageview');
+	var u = document.getElementById("target");
+	var b = document.getElementById("turn-on");
 
+	b.addEventListener("click", function () {
+		u.style.removeProperty("display");
+	});
 </script>
 </html>

@@ -23,10 +23,12 @@ $('document').ready(function(){
 		$('#bulb_green').addClass('bulb-glow-green');
 		$('#bulb_pink').addClass('bulb-glow-pink');
 		$('#bulb_orange').addClass('bulb-glow-orange');
-		$('body').addClass('cb-slideshow');
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
 			$('#play').fadeIn('slow');
+
+		$("#target").removeAttr("style");
 		});
+
 	});
 	$('#play').click(function(){
 		var audio = $('.song')[0];
@@ -39,6 +41,7 @@ $('document').ready(function(){
 		$('#bulb_orange').addClass('bulb-glow-orange-after');
 		$('body').css('backgroud-color','#FFF');
 		$('body').addClass('peach-after');
+
 		$(this).fadeOut('slow').delay(6000).promise().done(function(){
 			$('#bannar_coming').fadeIn('slow');
 		});
@@ -50,7 +53,7 @@ $('document').ready(function(){
 			$('#balloons_flying').fadeIn('slow');
 		});
 	});
-	
+
 
 	function loopOne() {
 		var randleft = 300*Math.random();
@@ -119,11 +122,11 @@ $('document').ready(function(){
 		loopFive();
 		loopSix();
 		loopSeven();
-		
+
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
 			$('#cake_fadein').fadeIn('slow');
 		});
-	});	
+	});
 
 	$('#cake_fadein').click(function(){
 		$('.cake').fadeIn('slow');
@@ -139,7 +142,7 @@ $('document').ready(function(){
 		});
 	});
 
-		
+
 	$('#wish_message').click(function(){
 		 vw = $(window).width()/2;
 
@@ -164,13 +167,13 @@ $('document').ready(function(){
 			$('#story').fadeIn('slow');
 		});
 	});
-	
+
 	$('#story').click(function(){
 		$(this).fadeOut('slow');
 		$('.cake').fadeOut('fast').promise().done(function(){
 			$('.message').fadeIn('slow');
 		});
-		
+
 		var i;
 
 		function msgLoop (i) {
@@ -181,18 +184,18 @@ $('document').ready(function(){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
 					$('.cake').fadeIn('fast');
 				});
-				
+
 			}
 			else{
 				msgLoop(i);
-			}			
+			}
 
 		});
 			// body...
 		}
-		
+
 		msgLoop(0);
-		
+
 	});
 });
 
